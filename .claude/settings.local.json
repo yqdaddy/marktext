@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf ~/.cache/electron/* ~/.cache/electron-builder/*)",
+      "Bash(yarn run *)"
+    ]
+  }
+}

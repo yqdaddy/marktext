@@ -97,15 +97,17 @@ class Preference extends EventEmitter {
   }
 
   setItem (key, value) {
+    const result = this.store.set(key, value)
+    // 先保存，再广播（确保广播的是新值）
     ipcMain.emit('broadcast-preferences-changed', { [key]: value })
     // 广播偏好设置变化到所有窗口
-    const { BrowserWindow } = require('electron')
+    const allPreferences = this.getAll()
     BrowserWindow.getAllWindows().forEach(win => {
       if (!win.isDestroyed()) {
-        win.webContents.send('mt::user-preference', this.getAll())
+        win.webContents.send('mt::user-preference', allPreferences)
       }
     })
-    return this.store.set(key, value)
+    return result
   }
 
   getItem (key) {

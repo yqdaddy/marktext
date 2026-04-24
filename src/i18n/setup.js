@@ -36,13 +36,21 @@ async function loadLanguageAsync (lang) {
     return Promise.resolve()
   } catch (err) {
     console.error(`Failed to load language: ${lang}`, err)
-    return Promise.resolve()
+    // Fallback to English if the requested language fails to load
+    if (lang !== 'en') {
+      return loadLanguageAsync('en')
+    }
+    return Promise.reject(err)
   }
 }
 
 // 初始化 i18n
 async function setupI18n (initialLang = 'en') {
-  await loadLanguageAsync(initialLang)
+  // Always load fallback language first to ensure missing keys can fallback
+  await loadLanguageAsync('en')
+  if (initialLang !== 'en') {
+    await loadLanguageAsync(initialLang)
+  }
   i18n.locale = initialLang
 
   // 同步 Element UI 语言
@@ -59,20 +67,17 @@ async function setupI18n (initialLang = 'en') {
 async function changeLanguage (lang) {
   await loadLanguageAsync(lang)
 
-  // 强制触发 Vue 响应性更新
-  // 先设置为空值，再设置目标值，确保 Vue 检测到变化
-  if (i18n.locale === lang) {
-    i18n.locale = ''
-    await Vue.nextTick()
+  // Only update if the language is different to avoid unnecessary UI updates
+  if (i18n.locale !== lang) {
+    i18n.locale = lang
+
+    // 同步 Element UI 语言
+    const elementLang = elementLanguageMap[lang] || elementLanguageMap.en || enElement
+    ElementLocale.use(elementLang)
+
+    // 设置 document lang
+    document.documentElement.lang = lang
   }
-  i18n.locale = lang
-
-  // 同步 Element UI 语言
-  const elementLang = elementLanguageMap[lang] || elementLanguageMap.en || enElement
-  ElementLocale.use(elementLang)
-
-  // 设置 document lang
-  document.documentElement.lang = lang
 
   return lang
 }
