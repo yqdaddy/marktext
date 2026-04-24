@@ -98,6 +98,13 @@ class Preference extends EventEmitter {
 
   setItem (key, value) {
     ipcMain.emit('broadcast-preferences-changed', { [key]: value })
+    // 广播偏好设置变化到所有窗口
+    const { BrowserWindow } = require('electron')
+    BrowserWindow.getAllWindows().forEach(win => {
+      if (!win.isDestroyed()) {
+        win.webContents.send('mt::user-preference', this.getAll())
+      }
+    })
     return this.store.set(key, value)
   }
 
@@ -143,7 +150,9 @@ class Preference extends EventEmitter {
       win.webContents.send('mt::user-preference', this.getAll())
     })
     ipcMain.on('mt::set-user-preference', (e, settings) => {
+      console.log('[Preference] mt::set-user-preference received:', JSON.stringify(settings))
       this.setItems(settings)
+      console.log('[Preference] After setItems, language is:', this.getItem('language'))
     })
     ipcMain.on('mt::cmd-toggle-autosave', e => {
       this.setItem('autoSave', !!this.getItem('autoSave'))

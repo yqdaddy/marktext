@@ -9,6 +9,7 @@ import { updateFormatMenu } from '../menu/actions/format'
 import { updateSelectionMenus } from '../menu/actions/paragraph'
 import { viewLayoutChanged } from '../menu/actions/view'
 import configureMenu, { configSettingMenu } from '../menu/templates'
+import { setLanguage, getCurrentLanguage } from '../../i18n/main'
 
 const RECENTLY_USED_DOCUMENTS_FILE_NAME = 'recently-used-documents.json'
 const MAX_RECENTLY_USED_DOCUMENTS = 12
@@ -415,6 +416,14 @@ class AppMenu {
       if (prefs.autoSave !== undefined) {
         this.updateAutoSaveMenu(prefs.autoSave)
       }
+    })
+
+    ipcMain.on('mt::language-change', (e, lang) => {
+      console.log('[Menu] mt::language-change received:', lang)
+      setLanguage(lang)
+      console.log('[Menu] After setLanguage, current:', getCurrentLanguage())
+      this.updateAppMenu()
+      console.log('[Menu] updateAppMenu called')
     })
   }
 }

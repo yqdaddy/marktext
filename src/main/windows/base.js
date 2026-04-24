@@ -76,7 +76,8 @@ class BaseWindow extends EventEmitter {
       codeFontSize,
       hideScrollbar,
       theme,
-      titleBarStyle
+      titleBarStyle,
+      language
     } = userPreference.getAll()
 
     /* eslint-disable */
@@ -97,6 +98,7 @@ class BaseWindow extends EventEmitter {
     url.searchParams.set('hsb', hideScrollbar ? '1' : '0')
     url.searchParams.set('theme', theme)
     url.searchParams.set('tbs', titleBarStyle)
+    url.searchParams.set('lang', language || 'en')
 
     return url
   }

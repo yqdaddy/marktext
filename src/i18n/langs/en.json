@@ -1,0 +1,690 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "selectAll": "Select All",
+    "loading": "Loading...",
+    "delete": "Delete",
+    "edit": "Edit",
+    "reset": "Reset",
+    "options": "Options",
+    "description": "Description",
+    "search": "Search",
+    "replace": "Replace",
+    "required": "Required",
+    "optional": "Optional",
+    "restartRequired": "Requires restart."
+  },
+  "menu": {
+    "file": {
+      "label": "File",
+      "newTab": "New Tab",
+      "newWindow": "New Window",
+      "openFile": "Open File...",
+      "openFolder": "Open Folder...",
+      "openRecent": "Open Recent",
+      "clearRecentlyUsed": "Clear Recently Used",
+      "save": "Save",
+      "saveAs": "Save As...",
+      "autoSave": "Auto Save",
+      "moveTo": "Move To...",
+      "rename": "Rename...",
+      "import": "Import...",
+      "export": "Export",
+      "exportAsHtml": "HTML",
+      "exportAsPdf": "PDF",
+      "print": "Print",
+      "preferences": "Preferences...",
+      "closeTab": "Close Tab",
+      "closeWindow": "Close Window",
+      "quit": "Quit"
+    },
+    "edit": {
+      "label": "Edit",
+      "undo": "Undo",
+      "redo": "Redo",
+      "cut": "Cut",
+      "copy": "Copy",
+      "paste": "Paste",
+      "copyAsMarkdown": "Copy as Markdown",
+      "copyAsHtml": "Copy as HTML",
+      "pasteAsPlainText": "Paste as Plain Text",
+      "selectAll": "Select All",
+      "duplicate": "Duplicate",
+      "createParagraph": "Create Paragraph",
+      "deleteParagraph": "Delete Paragraph",
+      "find": "Find",
+      "findNext": "Find Next",
+      "findPrevious": "Find Previous",
+      "replace": "Replace",
+      "findInFolder": "Find in Folder",
+      "screenshot": "Screenshot",
+      "lineEnding": "Line Ending",
+      "crlf": "Carriage return and line feed (CRLF)",
+      "lf": "Line feed (LF)",
+      "defaultLineEnding": "Default"
+    },
+    "paragraph": {
+      "label": "Paragraph",
+      "heading1": "Heading 1",
+      "heading2": "Heading 2",
+      "heading3": "Heading 3",
+      "heading4": "Heading 4",
+      "heading5": "Heading 5",
+      "heading6": "Heading 6",
+      "promoteHeading": "Promote Heading",
+      "demoteHeading": "Demote Heading",
+      "table": "Table",
+      "codeFences": "Code Fences",
+      "quoteBlock": "Quote Block",
+      "mathBlock": "Math Block",
+      "htmlBlock": "HTML Block",
+      "orderedList": "Ordered List",
+      "bulletList": "Bullet List",
+      "taskList": "Task List",
+      "looseListItem": "Loose List Item",
+      "paragraph": "Paragraph",
+      "horizontalRule": "Horizontal Rule",
+      "frontMatter": "Front Matter"
+    },
+    "format": {
+      "label": "Format",
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "superscript": "Superscript",
+      "subscript": "Subscript",
+      "highlight": "Highlight",
+      "inlineCode": "Inline Code",
+      "inlineMath": "Inline Math",
+      "strikethrough": "Strikethrough",
+      "hyperlink": "Hyperlink",
+      "image": "Image",
+      "clearFormatting": "Clear Formatting"
+    },
+    "view": {
+      "label": "View",
+      "commandPalette": "Command Palette...",
+      "sourceCodeMode": "Source Code Mode",
+      "typewriterMode": "Typewriter Mode",
+      "focusMode": "Focus Mode",
+      "showSidebar": "Show Sidebar",
+      "showTabBar": "Show Tab Bar",
+      "toggleToc": "Toggle Table of Contents",
+      "reloadImages": "Reload Images",
+      "devTools": "Show Developer Tools",
+      "reloadWindow": "Reload window",
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out",
+      "fullScreen": "Show in Full Screen"
+    },
+    "theme": {
+      "label": "Theme",
+      "cadmiumLight": "Cadmium Light",
+      "dark": "Dark",
+      "graphiteLight": "Graphite Light",
+      "materialDark": "Material Dark",
+      "oneDark": "One Dark",
+      "ulyssesLight": "Ulysses Light"
+    },
+    "window": {
+      "label": "Window",
+      "minimize": "Minimize",
+      "alwaysOnTop": "Always on Top",
+      "zoom": "Zoom",
+      "bringAllToFront": "Bring All to Front"
+    },
+    "help": {
+      "label": "Help",
+      "quickStart": "Quick Start...",
+      "markdownReference": "Markdown Reference...",
+      "changelog": "Changelog...",
+      "donate": "Donate via Open Collective...",
+      "twitterFeedback": "Feedback via Twitter...",
+      "reportIssue": "Report Issue or Request Feature...",
+      "website": "Website...",
+      "watchOnGitHub": "Watch on GitHub...",
+      "followGitHub": "Follow us on Github...",
+      "followTwitter": "Follow us on Twitter...",
+      "license": "License...",
+      "checkUpdates": "Check for updates...",
+      "about": "About MarkText..."
+    },
+    "marktext": {
+      "label": "MarkText",
+      "about": "About MarkText",
+      "checkUpdates": "Check for updates...",
+      "preferences": "Preferences",
+      "services": "Services",
+      "hide": "Hide MarkText",
+      "hideOthers": "Hide Others",
+      "showAll": "Show All",
+      "quit": "Quit MarkText"
+    }
+  },
+  "preferences": {
+    "sideBar": {
+      "title": "Preferences",
+      "searchPreferences": "Search preferences",
+      "categories": {
+        "general": "General",
+        "editor": "Editor",
+        "markdown": "Markdown",
+        "spelling": "Spelling",
+        "theme": "Theme",
+        "image": "Image",
+        "keybindings": "Key Bindings"
+      }
+    },
+    "general": {
+      "title": "General",
+      "autoSave": {
+        "title": "Auto Save:",
+        "autoSaveDesc": "Automatically save document changes",
+        "delayDesc": "Delay following document edit before automatically saving"
+      },
+      "window": {
+        "title": "Window:",
+        "titleBarStyle": "Title bar style",
+        "hideScrollbar": "Hide scrollbars",
+        "openFilesInNewWindow": "Open files in new window",
+        "openFoldersInNewWindow": "Open folders in new window",
+        "zoom": "Zoom"
+      },
+      "sidebar": {
+        "title": "Sidebar:",
+        "wordWrapInToc": "Wrap text in table of contents",
+        "fileSortBy": "Sort field for files in open folders"
+      },
+      "startup": {
+        "title": "Action on startup:",
+        "restoreLastSession": "Restore last editor session",
+        "openDefaultDir": "Open the default directory",
+        "openBlank": "Open a blank page",
+        "selectFolder": "Select Folder"
+      },
+      "misc": {
+        "title": "Misc:",
+        "language": "User interface language"
+      }
+    },
+    "editor": {
+      "title": "Editor",
+      "textEditor": {
+        "title": "Text editor settings:",
+        "fontSize": "Font size",
+        "lineHeight": "Line height",
+        "fontFamily": "Font family",
+        "editorLineWidth": "Maximum width of text editor",
+        "editorLineWidthNotes": "Leave empty for theme default, otherwise use number with unit suffix."
+      },
+      "codeBlock": {
+        "title": "Code block settings:",
+        "fontSize": "Font size",
+        "fontFamily": "Font family",
+        "showLineNumbers": "Show line numbers",
+        "trimEmptyLines": "Remove leading and trailing empty lines"
+      },
+      "writingBehavior": {
+        "title": "Writing behavior:",
+        "autoPairBracket": "Automatically close brackets when writing",
+        "autoPairMarkdown": "Automatically complete markdown syntax",
+        "autoPairQuote": "Automatically close quotation marks"
+      },
+      "fileRepresentation": {
+        "title": "File representation:",
+        "tabWidth": "Preferred tab width",
+        "lineSeparator": "Line separator type",
+        "defaultEncoding": "Default encoding",
+        "autoDetectEncoding": "Automatically detect file encoding",
+        "trailingNewline": "Handling of trailing newline characters"
+      },
+      "misc": {
+        "title": "Misc:",
+        "textDirection": "Text direction",
+        "hideQuickInsertHint": "Hide hint for selecting type of new paragraph",
+        "hideLinkPopup": "Hide popup when cursor is over link",
+        "autoCheck": "Whether to automatically check any related tasks"
+      }
+    },
+    "markdown": {
+      "title": "Markdown",
+      "lists": {
+        "title": "Lists:",
+        "preferLooseListItem": "Prefer loose list items",
+        "bulletListMarker": "Preferred marker for bullet lists",
+        "orderListDelimiter": "Preferred marker for ordered lists",
+        "listIndentation": "Preferred list indentation"
+      },
+      "extensions": {
+        "title": "Markdown extensions:",
+        "frontmatterType": "Front matter format",
+        "superSubScript": "Enable Pandoc-style superscript and subscript",
+        "footnote": "Enable Pandoc-style footnotes"
+      },
+      "compatibility": {
+        "title": "Compatibility:",
+        "htmlRendering": "Enable HTML rendering",
+        "gitlabCompatibility": "Enable GitLab compatibility mode"
+      },
+      "diagrams": {
+        "title": "Diagrams:",
+        "sequenceTheme": "Sequence diagram theme"
+      },
+      "misc": {
+        "title": "Misc:",
+        "headingStyle": "Preferred heading style"
+      }
+    },
+    "spellchecker": {
+      "title": "Spelling",
+      "enable": "Enable spell checking",
+      "hideUnderline": "Hide marks for spelling errors",
+      "autoDetect": "Automatically detect document language",
+      "defaultLanguage": "Default language for spell checking",
+      "osxDetectNote": "The used language will be detected automatically while typing. Additional languages may be added through \"Language & Region\" in your system preferences pane.",
+      "customDictionary": {
+        "title": "Custom dictionary:",
+        "edit": "Edit words in custom dictionary.",
+        "noWords": "No words available",
+        "word": "Word"
+      },
+      "errors": {
+        "switchFailed": "Failed to switch language",
+        "removeFailed": "Failed to remove custom word",
+        "saveFailed": "An unexpected error occurred while saving."
+      }
+    },
+    "theme": {
+      "title": "Theme",
+      "autoSwitch": "Automatically adjust application theme according to system settings",
+      "openThemesFolder": "Open the themes folder",
+      "importTheme": "Import custom themes",
+      "openFolderBtn": "Open Folder",
+      "importThemeBtn": "Import Theme"
+    },
+    "image": {
+      "title": "Image",
+      "defaultAction": "Default action after an image is inserted from local folder or clipboard",
+      "clipboardNote": "Clipboard handling is only fully supported on macOS and Windows.",
+      "preferRelativeDir": "Whether to prefer the relative image directory.",
+      "relativeDirName": "The relative image folder name."
+    },
+    "keybindings": {
+      "title": "Key Bindings",
+      "customize": "Customize MarkText shortcuts...",
+      "keyCombination": "Key Combination",
+      "reset": "Reset",
+      "unbind": "Unbind",
+      "save": "Save",
+      "restoreDefaults": "Restore default key bindings",
+      "debug": {
+        "title": "Debug options:",
+        "dumpKeyboard": "Dump keyboard information"
+      },
+      "errors": {
+        "saveFailed": "Failed to save",
+        "saveError": "An unexpected error occurred while saving.",
+        "shortcutInUse": "Shortcut already in use",
+        "shortcutConflict": "The shortcut is already in use. Please unset the shortcut and try again."
+      }
+    }
+  },
+  "muya": {
+    "quickInsert": {
+      "basicBlock": "basic block",
+      "header": "header",
+      "advancedBlock": "advanced block",
+      "listBlock": "list block",
+      "diagram": "diagram",
+      "paragraph": {
+        "title": "Paragraph",
+        "subTitle": "Lorem Ipsum is simply dummy text"
+      },
+      "horizontalLine": {
+        "title": "Horizontal Line",
+        "subTitle": "---"
+      },
+      "frontMatter": {
+        "title": "Front Matter",
+        "subTitle": "--- Lorem Ipsum ---"
+      },
+      "heading1": {
+        "title": "Heading 1",
+        "subTitle": "# Lorem Ipsum is simply ..."
+      },
+      "heading2": {
+        "title": "Heading 2",
+        "subTitle": "## Lorem Ipsum is simply ..."
+      },
+      "heading3": {
+        "title": "Heading 3",
+        "subTitle": "### Lorem Ipsum is simply ..."
+      },
+      "heading4": {
+        "title": "Heading 4",
+        "subTitle": "#### Lorem Ipsum is simply ..."
+      },
+      "heading5": {
+        "title": "Heading 5",
+        "subTitle": "##### Lorem Ipsum is simply ..."
+      },
+      "heading6": {
+        "title": "Heading 6",
+        "subTitle": "###### Lorem Ipsum is simply ..."
+      },
+      "table": {
+        "title": "Table Block",
+        "subTitle": "|Lorem | Ipsum is simply |"
+      },
+      "math": {
+        "title": "Display Math",
+        "subTitle": "$$ Lorem Ipsum is simply $$"
+      },
+      "html": {
+        "title": "HTML Block",
+        "subTitle": "<div> Lorem Ipsum is simply </div>"
+      },
+      "code": {
+        "title": "Code Block",
+        "subTitle": "```java Lorem Ipsum is simply ```"
+      },
+      "quote": {
+        "title": "Quote Block",
+        "subTitle": ">Lorem Ipsum is simply ..."
+      },
+      "orderList": {
+        "title": "Order List",
+        "subTitle": "1. Lorem Ipsum is simply ..."
+      },
+      "bulletList": {
+        "title": "Bullet List",
+        "subTitle": "- Lorem Ipsum is simply ..."
+      },
+      "taskList": {
+        "title": "To-do List",
+        "subTitle": "- [x] Lorem Ipsum is simply ..."
+      },
+      "vega": {
+        "title": "Vega Chart",
+        "subTitle": "Render flow chart by vega-lite.js."
+      },
+      "flowchart": {
+        "title": "Flow Chart",
+        "subTitle": "Render flow chart by flowchart.js."
+      },
+      "sequence": {
+        "title": "Sequence Diagram",
+        "subTitle": "Render sequence diagram by js-sequence."
+      },
+      "plantuml": {
+        "title": "PlantUML Diagram",
+        "subTitle": "Render PlantUML diagrams"
+      },
+      "mermaid": {
+        "title": "Mermaid",
+        "subTitle": "Render Diagram by mermaid."
+      },
+      "noResult": "No result"
+    },
+    "formatPicker": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "strikethrough": "Strikethrough",
+      "highlight": "Highlight",
+      "inlineCode": "Inline Code",
+      "inlineMath": "Inline Math",
+      "link": "Link",
+      "image": "Image",
+      "clearFormat": "Clear Formatting"
+    },
+    "frontMenu": {
+      "duplicate": "Duplicate",
+      "turnInto": "Turn Into",
+      "newParagraph": "New Paragraph",
+      "delete": "Delete"
+    },
+    "imageToolbar": {
+      "edit": "Edit Image",
+      "inline": "Inline Image",
+      "alignLeft": "Align Left",
+      "alignCenter": "Align Middle",
+      "alignRight": "Align Right",
+      "remove": "Remove Image"
+    },
+    "tableTools": {
+      "insertRowAbove": "Insert Row Above",
+      "insertRowBelow": "Insert Row Below",
+      "removeRow": "Remove Row",
+      "insertColLeft": "Insert Column Left",
+      "insertColRight": "Insert Column Right",
+      "removeCol": "Remove Column"
+    },
+    "imageSelector": {
+      "select": "Select",
+      "embedLink": "Embed link",
+      "unsplash": "Unsplash",
+      "chooseImage": "Choose an Image",
+      "chooseDesc": "Choose image from your computer.",
+      "altText": "Alt text",
+      "imageLink": "Image link or local path",
+      "imageTitle": "Image title",
+      "embedImage": "Embed Image",
+      "pasteNote": "Paste web image or local image path.",
+      "simpleMode": "simple mode",
+      "fullMode": "full mode",
+      "unsplashSearch": "Search photos on Unsplash",
+      "noResult": "No result...",
+      "by": "By ",
+      "searchMore": "Search for more photos..."
+    }
+  },
+  "components": {
+    "tweet": {
+      "title": "Send us feedback via tweet",
+      "experienceQuestion": "What's your experience feelings?",
+      "feedbackQuestion": "Tell us your feedback?",
+      "reportViaGithub": "Report bug or feature request via GitHub",
+      "tweetButton": "Tweet"
+    },
+    "about": {
+      "title": "MarkText",
+      "copyrightAuthor": "Copyright",
+      "copyrightContributors": "Copyright Contributors"
+    },
+    "titleBar": {
+      "appName": "MarkText",
+      "words": "Words",
+      "characters": "Characters",
+      "paragraphs": "Paragraphs",
+      "wordShort": "W",
+      "characterShort": "C",
+      "paragraphShort": "P",
+      "allShort": "A",
+      "wordFull": "word",
+      "characterFull": "character",
+      "paragraphFull": "paragraph",
+      "allFull": "(with space)character"
+    },
+    "commandPalette": {
+      "placeholder": "Type a command to execute"
+    },
+    "exportSettings": {
+      "title": "Export Options",
+      "info": "Info",
+      "page": "Page",
+      "style": "Style",
+      "theme": "Theme",
+      "headerFooter": "Header & Footer",
+      "toc": "Table of Contents",
+      "pageInfo": "Please customize the page appearance...",
+      "pageTitle": "The page title:",
+      "pageSize": "Page size:",
+      "widthHeight": "Width/Height in mm:",
+      "landscape": "Landscape orientation:",
+      "pageMargin": "Page margin in mm:",
+      "topBottom": "Top/Bottom:",
+      "leftRight": "Left/Right:",
+      "overwriteFont": "Overwrite theme font settings:",
+      "fontFamily": "Font family:",
+      "fontSize": "Font size",
+      "lineHeight": "Line height",
+      "autoNumbering": "Auto numbering headings:",
+      "showFrontMatter": "Show front matter:",
+      "styleInfo": "You can change the document appearance...",
+      "themeSelect": "Theme:",
+      "headerInfo": "The text appear on all pages...",
+      "headerType": "Header type:",
+      "headerLeft": "The left header text:",
+      "headerMain": "The main header text:",
+      "headerRight": "The right header text:",
+      "footerType": "Footer type:",
+      "footerLeft": "The left footer text:",
+      "footerMain": "The main footer text:",
+      "footerRight": "The right footer text:",
+      "customStyle": "Customize style:",
+      "styledHeaderFooter": "Allow styled header and footer:",
+      "headerFooterFontSize": "Header and footer font size",
+      "includeTopHeading": "Include top heading:",
+      "includeTopHeadingNote": "Includes the first heading level too.",
+      "exportBtn": "Export..."
+    },
+    "search": {
+      "placeholder": "Search",
+      "replacementPlaceholder": "Replacement",
+      "caseSensitive": "Case Sensitive",
+      "wholeWord": "Select whole word",
+      "useRegex": "Use query as RegEx",
+      "replaceAll": "Replace All",
+      "replaceSingle": "Replace Single",
+      "invalidRegexp": "Invalid regular expression: /{searchValue}/.",
+      "regexpMatchEmpty": "RegExp: /{searchValue}/ match empty string.",
+      "searchPlaceholder": "Search",
+      "replacePlaceholder": "Replacement",
+      "regex": "Use query as RegEx"
+    },
+    "editor": {
+      "insertTable": "Insert Table",
+      "rows": "Rows",
+      "columns": "Columns"
+    },
+    "about": {
+      "title": "MarkText",
+      "copyright": "Copyright",
+      "contributors": "contributors",
+      "madeWithLove": "made with ❤︎"
+    },
+    "sideBar": {
+      "newFile": "New File",
+      "newDirectory": "New Directory",
+      "copy": "Copy",
+      "cut": "Cut",
+      "paste": "Paste",
+      "rename": "Rename",
+      "moveToTrash": "Move To Trash",
+      "showInFolder": "Show In Folder",
+      "toc": {
+        "title": "Table Of Contents"
+      },
+      "tree": {
+        "openedFiles": "Opened files",
+        "saveAll": "Save All",
+        "closeAll": "Close All",
+        "emptyProject": "Empty project",
+        "createFile": "Create File",
+        "openFolder": "Open Folder"
+      },
+      "search": {
+        "placeholder": "Search in folder...",
+        "caseSensitive": "Case Sensitive",
+        "wholeWord": "Select whole word",
+        "regex": "Use query as RegEx",
+        "noFolderOpen": "No folder open",
+        "noResults": "No results found.",
+        "cancel": "Cancel",
+        "openFolder": "Open Folder",
+        "matchCount": "{matchCount} match in {fileCount} file",
+        "matchCount_plural": "{matchCount} matches in {fileCount} files",
+        "searchLimited": "Search was limited to 100 files."
+      }
+    }
+  },
+  "options": {
+    "titleBarStyle": {
+      "custom": "Custom",
+      "native": "Native"
+    },
+    "endOfLine": {
+      "default": "Default",
+      "crlf": "Carriage return and line feed (CRLF)",
+      "lf": "Line feed (LF)"
+    },
+    "textDirection": {
+      "ltr": "Left to Right",
+      "rtl": "Right to Left"
+    },
+    "trimTrailingNewline": {
+      "trimAll": "Trim all trailing",
+      "ensureOne": "Ensure exactly one trailing",
+      "preserveStyle": "Preserve style of original document",
+      "doNothing": "Do nothing"
+    },
+    "sortBy": {
+      "created": "Creation time",
+      "modified": "Modification time",
+      "title": "Title"
+    },
+    "language": {
+      "en": "English",
+      "zh-CN": "简体中文"
+    },
+    "bulletListMarker": {
+      "hyphen": "-",
+      "asterisk": "*",
+      "plus": "+"
+    },
+    "orderListDelimiter": {
+      "dot": ".",
+      "parenthesis": ")"
+    },
+    "headingStyle": {
+      "atx": "atx",
+      "setext": "setext"
+    },
+    "frontmatterType": {
+      "yaml": "- (YAML)",
+      "toml": "+ (TOML)",
+      "json": "; (JSON)",
+      "action": "{ (action)"
+    },
+    "listIndentation": {
+      "dfm": "DocFx style",
+      "tab": "Tab",
+      "1space": "1 space",
+      "2space": "2 spaces",
+      "3space": "3 spaces",
+      "4space": "4 spaces"
+    },
+    "sequenceTheme": {
+      "hand": "Hand drawn",
+      "simple": "Simple"
+    },
+    "imageInsertAction": {
+      "upload": "Upload to cloud",
+      "folder": "Move to designated local folder",
+      "path": "Insert relative path"
+    },
+    "autoSwitchTheme": {
+      "always": "Adjust theme at startup",
+      "never": "Never",
+      "0": "Always light",
+      "1": "Always dark",
+      "2": "System preference"
+    }
+  }
+}

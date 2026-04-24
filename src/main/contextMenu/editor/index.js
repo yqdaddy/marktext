@@ -11,8 +11,20 @@ import {
   INSERT_AFTER
 } from './menuItems'
 import spellcheckMenuBuilder from './spellcheck'
+import { t } from '../../../i18n/main'
 
-const CONTEXT_ITEMS = [INSERT_BEFORE, INSERT_AFTER, SEPARATOR, CUT, COPY, PASTE, SEPARATOR, COPY_AS_MARKDOWN, COPY_AS_HTML, PASTE_AS_PLAIN_TEXT]
+const getContextMenuItems = () => [
+  { ...INSERT_BEFORE, label: INSERT_BEFORE.label() },
+  { ...INSERT_AFTER, label: INSERT_AFTER.label() },
+  SEPARATOR,
+  { ...CUT, label: CUT.label() },
+  { ...COPY, label: COPY.label() },
+  { ...PASTE, label: PASTE.label() },
+  SEPARATOR,
+  { ...COPY_AS_MARKDOWN, label: COPY_AS_MARKDOWN.label() },
+  { ...COPY_AS_HTML, label: COPY_AS_HTML.label() },
+  { ...PASTE_AS_PLAIN_TEXT, label: PASTE_AS_PLAIN_TEXT.label() }
+]
 
 const isInsideEditor = params => {
   const { isEditable, editFlags, inputFieldType } = params
@@ -37,16 +49,17 @@ export const showEditorContextMenu = (win, event, params, isSpellcheckerEnabled)
     if (isSpellcheckerEnabled) {
       const spellingSubmenu = spellcheckMenuBuilder(isMisspelled, misspelledWord, dictionarySuggestions)
       menu.append(new MenuItem({
-        label: 'Spelling...',
+        label: t('contextMenu.spelling', 'Spelling...'),
         submenu: spellingSubmenu
       }))
       menu.append(new MenuItem(SEPARATOR))
     }
 
-    [CUT, COPY, COPY_AS_HTML, COPY_AS_MARKDOWN].forEach(item => {
-      item.enabled = canCopy
-    })
-    CONTEXT_ITEMS.forEach(item => {
+    const contextItems = getContextMenuItems()
+    contextItems.forEach(item => {
+      if (item.id && (item.id === 'cutMenuItem' || item.id === 'copyMenuItem' || item.id === 'copyAsHtmlMenuItem' || item.id === 'copyAsMarkdownMenuItem')) {
+        item.enabled = canCopy
+      }
       menu.append(new MenuItem(item))
     })
     menu.popup([{ window: win, x: event.clientX, y: event.clientY }])

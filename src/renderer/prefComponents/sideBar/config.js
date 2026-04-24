@@ -9,37 +9,37 @@ import KeyBindingIcon from '@/assets/icons/pref_key_binding.svg'
 import preferences from '../../../main/preferences/schema'
 
 export const category = [{
-  name: 'General',
+  name: 'preferences.sideBar.categories.general',
   label: 'general',
   icon: GeneralIcon,
   path: '/preference/general'
 }, {
-  name: 'Editor',
+  name: 'preferences.sideBar.categories.editor',
   label: 'editor',
   icon: EditorIcon,
   path: '/preference/editor'
 }, {
-  name: 'Markdown',
+  name: 'preferences.sideBar.categories.markdown',
   label: 'markdown',
   icon: MarkdownIcon,
   path: '/preference/markdown'
 }, {
-  name: 'Spelling',
+  name: 'preferences.sideBar.categories.spelling',
   label: 'spelling',
   icon: SpellIcon,
   path: '/preference/spelling'
 }, {
-  name: 'Theme',
+  name: 'preferences.sideBar.categories.theme',
   label: 'theme',
   icon: ThemeIcon,
   path: '/preference/theme'
 }, {
-  name: 'Image',
+  name: 'preferences.sideBar.categories.image',
   label: 'image',
   icon: ImageIcon,
   path: '/preference/image'
 }, {
-  name: 'Key Bindings',
+  name: 'preferences.sideBar.categories.keybindings',
   label: 'keybindings',
   icon: KeyBindingIcon,
   path: '/preference/keybindings'

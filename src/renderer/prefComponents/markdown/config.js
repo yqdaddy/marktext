@@ -1,68 +1,68 @@
 export const bulletListMarkerOptions = [{
-  label: '*',
+  label: 'options.bulletListMarker.asterisk',
   value: '*'
 }, {
-  label: '-',
+  label: 'options.bulletListMarker.hyphen',
   value: '-'
 }, {
-  label: '+',
+  label: 'options.bulletListMarker.plus',
   value: '+'
 }]
 
 export const orderListDelimiterOptions = [{
-  label: '.',
+  label: 'options.orderListDelimiter.dot',
   value: '.'
 }, {
-  label: ')',
+  label: 'options.orderListDelimiter.parenthesis',
   value: ')'
 }]
 
 export const preferHeadingStyleOptions = [{
-  label: 'ATX heading',
+  label: 'options.headingStyle.atx',
   value: 'atx'
 }, {
-  label: 'Setext heading',
+  label: 'options.headingStyle.setext',
   value: 'setext'
 }]
 
 export const listIndentationOptions = [{
-  label: 'DocFX style',
+  label: 'options.listIndentation.dfm',
   value: 'dfm'
 }, {
-  label: 'True tab character',
+  label: 'options.listIndentation.tab',
   value: 'tab'
 }, {
-  label: 'Single space character',
+  label: 'options.listIndentation.1space',
   value: 1
 }, {
-  label: 'Two space characters',
+  label: 'options.listIndentation.2space',
   value: 2
 }, {
-  label: 'Three space characters',
+  label: 'options.listIndentation.3space',
   value: 3
 }, {
-  label: 'Four space characters',
+  label: 'options.listIndentation.4space',
   value: 4
 }]
 
 export const frontmatterTypeOptions = [{
-  label: 'YAML',
+  label: 'options.frontmatterType.yaml',
   value: '-'
 }, {
-  label: 'TOML',
+  label: 'options.frontmatterType.toml',
   value: '+'
 }, {
-  label: 'JSON (;;;)',
+  label: 'options.frontmatterType.json',
   value: ';'
 }, {
-  label: 'JSON ({})',
+  label: 'options.frontmatterType.action',
   value: '{'
 }]
 
 export const sequenceThemeOptions = [{
-  label: 'Hand drawn',
+  label: 'options.sequenceTheme.hand',
   value: 'hand'
 }, {
-  label: 'Simple',
+  label: 'options.sequenceTheme.simple',
   value: 'simple'
 }]
