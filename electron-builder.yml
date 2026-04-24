@@ -6,8 +6,9 @@ asarUnpack:
 - "**/*.node"
 directories:
   output: "build"
-# Workaround: Don't download prebuilt libraries (GH#2953).
-buildDependenciesFromSource: true
+# Use prebuilt libraries to avoid Visual Studio requirement.
+buildDependenciesFromSource: false
+nodeGypRebuild: false
 files:
 - "dist/electron/**/*"
 # Don't bundle these files

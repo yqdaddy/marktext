@@ -34,10 +34,10 @@
       dir='ltr'
     >
       <div slot="title" class="dialog-title">
-        Insert Table
+        {{ $t('components.editor.insertTable') }}
       </div>
       <el-form :model="tableChecker" :inline="true">
-        <el-form-item label="Rows">
+        <el-form-item :label="$t('components.editor.rows')">
           <el-input-number
             ref="rowInput"
             size="mini"
@@ -47,7 +47,7 @@
             :max="30"
           ></el-input-number>
         </el-form-item>
-        <el-form-item label="Columns">
+        <el-form-item :label="$t('components.editor.columns')">
           <el-input-number
             size="mini"
             v-model="tableChecker.columns"
@@ -59,10 +59,10 @@
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button @click="dialogTableVisible = false">
-          Cancel
+          {{ $t('common.cancel') }}
         </el-button>
         <el-button type="primary" @click="handleDialogTableConfirm">
-          OK
+          {{ $t('common.confirm') }}
         </el-button>
       </div>
     </el-dialog>

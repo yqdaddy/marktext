@@ -61,7 +61,7 @@ const state = {
   spellcheckerLanguage: 'en-US',
 
   // Default values that are overwritten with the entries below.
-  sideBarVisibility: false,
+  sideBarVisibility: true,
   tabBarVisibility: false,
   sourceCodeModeEnabled: false,
 
@@ -115,12 +115,16 @@ const mutations = {
 }
 
 const actions = {
-  ASK_FOR_USER_PREFERENCE ({ commit }) {
+  ASK_FOR_USER_PREFERENCE ({ commit, dispatch }) {
     ipcRenderer.send('mt::ask-for-user-preference')
     ipcRenderer.send('mt::ask-for-user-data')
 
     ipcRenderer.on('mt::user-preference', (e, preferences) => {
       commit('SET_USER_PREFERENCE', preferences)
+      // 同步 i18n 语言（语言变化时需要切换）
+      if (preferences.language) {
+        dispatch('i18n/INIT_LANGUAGE', preferences.language, { root: true })
+      }
     })
   },
 

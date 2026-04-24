@@ -3,8 +3,6 @@ import VueElectron from 'vue-electron'
 import sourceMapSupport from 'source-map-support'
 import bootstrapRenderer from './bootstrap'
 import VueRouter from 'vue-router'
-import lang from 'element-ui/lib/locale/lang/en'
-import locale from 'element-ui/lib/locale'
 import axios from './axios'
 import store from './store'
 import './assets/symbolIcon'
@@ -37,6 +35,7 @@ import {
 import services from './services'
 import routes from './router'
 import { addElementStyle } from '@/util/theme'
+import { i18n, setupI18n } from '../i18n'
 
 import './assets/styles/index.css'
 import './assets/styles/printService.css'
@@ -58,8 +57,7 @@ addElementStyle()
 // -----------------------------------------------
 // Be careful when changing code before this line!
 
-// Configure Vue
-locale.use(lang)
+// Configure Vue - i18n will handle Element UI locale
 
 Vue.use(Dialog)
 Vue.use(Form)
@@ -100,9 +98,21 @@ const router = new VueRouter({
   routes: routes(global.marktext.env.type)
 })
 
-/* eslint-disable no-new */
-new Vue({
-  store,
-  router,
-  template: '<router-view class="view"></router-view>'
-}).$mount('#app')
+// Get initial language from URL params (passed by main process)
+const initialLanguage = global.marktext.initialState.language || 'en'
+
+// Initialize preferences state with initial values from URL params
+if (global.marktext.initialState) {
+  store.commit('SET_USER_PREFERENCE', global.marktext.initialState)
+}
+
+// Initialize i18n and create Vue instance
+setupI18n(initialLanguage).then(() => {
+  /* eslint-disable no-new */
+  new Vue({
+    store,
+    router,
+    i18n,
+    template: '<router-view class="view"></router-view>'
+  }).$mount('#app')
+})

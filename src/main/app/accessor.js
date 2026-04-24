@@ -5,6 +5,7 @@ import Keybindings from '../keyboard/shortcutHandler'
 import AppMenu from '../menu'
 import { loadMenuCommands } from '../menu/actions'
 import { CommandManager, loadDefaultCommands } from '../commands'
+import { setLanguage } from '../../i18n/main'
 
 class Accessor {
   /**
@@ -18,6 +19,12 @@ class Accessor {
 
     this.preferences = new Preference(this.paths)
     this.dataCenter = new DataCenter(this.paths)
+
+    // 从偏好设置初始化主进程语言
+    const savedLanguage = this.preferences.getItem('language')
+    if (savedLanguage && savedLanguage !== 'en') {
+      setLanguage(savedLanguage)
+    }
 
     this.commandManager = CommandManager
     this._loadCommands()

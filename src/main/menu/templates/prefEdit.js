@@ -1,22 +1,24 @@
+import { t } from '../../../i18n/main'
+
 export default function (keybindings) {
   return {
-    label: 'Edit',
+    label: t('menu.edit.label', 'Edit'),
     submenu: [{
-      label: 'Cut',
+      label: t('menu.edit.cut', 'Cut'),
       accelerator: keybindings.getAccelerator('edit.cut'),
       role: 'cut'
     }, {
-      label: 'Copy',
+      label: t('menu.edit.copy', 'Copy'),
       accelerator: keybindings.getAccelerator('edit.copy'),
       role: 'copy'
     }, {
-      label: 'Paste',
+      label: t('menu.edit.paste', 'Paste'),
       accelerator: keybindings.getAccelerator('edit.paste'),
       role: 'paste'
     }, {
       type: 'separator'
     }, {
-      label: 'Select All',
+      label: t('menu.edit.selectAll', 'Select All'),
       accelerator: keybindings.getAccelerator('edit.select-all'),
       role: 'selectAll'
     }]
